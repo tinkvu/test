@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Youh.ai Brand Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;600&family=Handlee&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-blue: #1E3A8A;
+      --warm-amber: #F59E0B;
+      --soft-sage: #84A98C;
+      --calm-lavender: #A78BFA;
+      --deep-charcoal: #1F2937;
+      --soft-cloud: #F3F4F6;
+      --handwritten: 'Handlee', cursive;
+      --primary-font: 'Fraunces', serif;
+      --secondary-font: 'Inter', sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --background: var(--deep-charcoal);
+      --text: var(--soft-cloud);
+      --heading: var(--warm-amber);
+      --note: var(--soft-sage);
+    }
+
+    [data-theme="light"] {
+      --background: var(--soft-cloud);
+      --text: var(--deep-charcoal);
+      --heading: var(--deep-blue);
+      --note: var(--calm-lavender);
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--text);
+      font-family: var(--secondary-font);
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.7;
+      transition: all 0.3s ease-in-out;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--primary-font);
+      color: var(--heading);
+    }
+
+    .note {
+      font-family: var(--handwritten);
+      color: var(--note);
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: var(--warm-amber);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .color-palette {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .color-box {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.75rem;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .logo-placeholder {
+      font-family: var(--handwritten);
+      font-size: 2rem;
+      margin-top: 1rem;
+      color: var(--heading);
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Mode</button>
+
+  <h1>Youh.ai Brand Guide</h1>
+  
+  <div class="section">
+    <h2>Our Purpose</h2>
+    <p>To preserve meaningful connections across time and distance, enabling authentic emotional presence when physical presence isn't possible.</p>
+    <div class="note">“A voice that feels like home.”</div>
+  </div>
+
+  <div class="section">
+    <h2>Vision & Mission</h2>
+    <p><strong>Vision:</strong> To become the world's most trusted emotional AI platform.</p>
+    <p><strong>Mission:</strong> We create thoughtfully designed AI companions that capture the essence of loved ones.</p>
+  </div>
+
+  <div class="section">
+    <h2>Brand Values</h2>
+    <ul>
+      <li><strong>Authentic Connection</strong></li>
+      <li><strong>Ethical Responsibility</strong></li>
+      <li><strong>Compassionate Innovation</strong></li>
+      <li><strong>Lasting Trust</strong></li>
+      <li><strong>Emotional Intelligence</strong></li>
+    </ul>
+    <div class="note">“Tech with a soul.”</div>
+  </div>
+
+  <div class="section">
+    <h2>Color Palette</h2>
+    <div class="color-palette">
+      <div class="color-box" style="background:#1E3A8A">Deep Blue</div>
+      <div class="color-box" style="background:#F59E0B">Amber</div>
+      <div class="color-box" style="background:#84A98C">Sage</div>
+      <div class="color-box" style="background:#A78BFA">Lavender</div>
+      <div class="color-box" style="background:#1F2937">Charcoal</div>
+      <div class="color-box" style="background:#F3F4F6; color:#333;">Cloud</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Typography</h2>
+    <p><strong>Fraunces:</strong> Emotional headlines</p>
+    <p><strong>Inter:</strong> Clear body text</p>
+    <p><strong>Handlee:</strong> Notes, quotes, emotional handwriting</p>
+  </div>
+
+  <div class="section">
+    <h2>Messaging</h2>
+    <p><strong>Tagline:</strong> “Talk to the ones you love, forever.”</p>
+    <p><strong>Emphasis:</strong> Emotional Continuity, Ethical Design, Enduring Legacy</p>
+  </div>
+
+  <div class="section">
+    <h2>Logo Suggestions</h2>
+    <p>We recommend a symbol that blends:</p>
+    <ul>
+      <li>A heart merged with a chat bubble</li>
+      <li>Gentle curves, organic forms</li>
+      <li>Subtle nods to memory and presence</li>
+    </ul>
+    <div class="logo-placeholder">[ Youh.ai ]</div>
+    <div class="note">“Where memory meets presence.”</div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+    }
+  </script>
+</body>
+</html>
